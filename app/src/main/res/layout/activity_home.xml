@@ -14,7 +14,7 @@
         app:fillColor="#FFFFFFFF"
         app:pageColor="#00000000"
         app:radius="6dp"
-        app:slideInterval="3000"
+        app:slideInterval="10000"
         app:strokeColor="#FF777777"
         app:strokeWidth="1dp"
         android:layout_alignParentTop="true"/>
@@ -24,30 +24,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:centered="false"
-        android:layout_below="@+id/carouselView"/>
+        android:layout_below="@+id/carouselView"
+        android:layout_marginBottom="10dp"/>
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/indicator">
 
     <Button
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_below="@+id/indicator"
         android:layout_marginLeft="30dp"
         android:id="@+id/btnAndroid"
-        android:drawableTop="@drawable/android"
+        android:drawableTop="@drawable/androidbtnimage"
         android:text="Android Bootcamp"
-        android:onClick="onAndroid"
-        />
+        android:textColor="@drawable/shapetextandroid"
+        android:background="@drawable/shapebtnandroid"
+        android:onClick="onAndroid" />
 
     <Button
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_below="@+id/indicator"
         android:id="@+id/btnIos"
         android:layout_marginLeft="50dp"
-         android:layout_toRightOf="@id/btnAndroid"
+        android:layout_toRightOf="@id/btnAndroid"
         android:drawableTop="@drawable/apple"
-        android:text="iOS          Bootcamp"
-        android:onClick="onIos"
-        />
+        android:text="iOS Bootcamp"
+        android:onClick="onIos" />
 
     <Button
         android:layout_width="150dp"
@@ -55,8 +60,7 @@
         android:id="@+id/btnHFTIC"
         android:layout_marginLeft="30dp"
         android:layout_below="@id/btnAndroid"
-        android:layout_marginTop="30dp"
-        />
+        android:layout_marginTop="30dp" />
 
     <Button
         android:layout_width="150dp"
@@ -65,8 +69,9 @@
         android:id="@+id/btnHistory"
         android:layout_marginLeft="50dp"
         android:layout_toRightOf="@id/btnAndroid"
-        android:layout_marginTop="30dp"
-        />
+        android:layout_marginTop="30dp" />
+
+</RelativeLayout>
 
 
 </RelativeLayout>
