@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -21,7 +22,7 @@ public class HomeActivity extends AppCompatActivity {
     CarouselView carouselView;
     Dialog myDialog;
 
-    int[] sampleImages = {R.drawable.hftic, R.drawable.ios};
+    int[] sampleImages = {R.drawable.hftic, R.drawable.ios, R.drawable.andoidcs};
     //int NUMBER_OF_PAGES = 5;
 
     @Override
@@ -52,6 +53,7 @@ public class HomeActivity extends AppCompatActivity {
         Button btnRegisterAndroid;
         Button btnShareAndroid;
         myDialog.setContentView(R.layout.popupandroid);
+        //myDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         //txtclose =(TextView) myDialog.findViewById(R.id.txtclose);
         //txtclose.setText("M");
         btnRegisterAndroid = (Button) myDialog.findViewById(R.id.btnRegisterAndroid);
@@ -81,7 +83,7 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+        myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         myDialog.show();
     }
 
