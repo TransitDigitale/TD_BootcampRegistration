@@ -23,7 +23,7 @@ public class HomeActivity extends AppCompatActivity {
     CarouselView carouselView;
     Dialog myDialog;
 
-    int[] sampleImages = {R.drawable.hftic, R.drawable.ios, R.drawable.andoidcs};
+    int[] sampleImages = {R.drawable.rl1, R.drawable.rl2, R.drawable.rl3};
     //int NUMBER_OF_PAGES = 5;
 
     @Override
