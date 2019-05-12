@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/linkAndroid"
-        android:text="wwww.google.com"
+        android:text="https://apply.codepath.com/cohorts/haiti-androidbootcamp-summer-2019/versions/student/"
         android:textSize="25sp"
         android:layout_centerHorizontal="true"
         android:gravity="center"/>

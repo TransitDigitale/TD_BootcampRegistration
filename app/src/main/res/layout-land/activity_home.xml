@@ -21,9 +21,10 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Transition Digitale"
+                android:text="Registration App"
                 android:gravity="center"
-                android:textSize="30sp"/>
+                android:textSize="30sp"
+                android:textStyle="bold"/>
 
 
         </RelativeLayout>
@@ -59,6 +60,7 @@
     android:gravity="center">
 
     <Button
+        android:padding="10dp"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginLeft="20dp"
@@ -70,6 +72,7 @@
         android:onClick="onAndroid" />
 
     <Button
+        android:padding="10dp"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:id="@+id/btnIos"
@@ -82,6 +85,7 @@
         android:onClick="onIos" />
 
     <Button
+        android:padding="10dp"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:id="@+id/btnHFTIC"
@@ -91,16 +95,22 @@
         android:drawableTop="@drawable/hfticbtnimage"
         android:text="Android bootcamp for women"
         android:background="@drawable/shapebtnhftic"
-        android:textColor="@drawable/shapetexthftic"/>
+        android:textColor="@drawable/shapetexthftic"
+        android:onClick="onHftic"/>
 
     <Button
+        android:padding="10dp"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_below="@+id/btnIos"
         android:id="@+id/btnHistory"
+        android:background="@drawable/shapebtnhistory"
         android:layout_marginLeft="50dp"
+        android:drawableTop="@drawable/historybtnimage"
         android:layout_toRightOf="@id/btnAndroid"
-        android:layout_marginTop="30dp" />
+        android:layout_marginTop="30dp"
+        android:text="History"
+        android:onClick="onHistory"/>
 
 </RelativeLayout>
 

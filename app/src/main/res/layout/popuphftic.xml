@@ -1,6 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/shapepopupandroid">
 
-</android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linkAndroid"
+        android:text="https://apply.codepath.com/cohorts/haiti-androidbootcampforwomen-summer-2019/versions/student/"
+        android:textSize="25sp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"/>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:id="@+id/btnRegisterAndroid"
+        android:layout_below="@+id/linkAndroid"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Register"/>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:id="@+id/btnShareAndroid"
+        android:layout_below="@+id/btnRegisterAndroid"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Share Link"/>
+
+</RelativeLayout>

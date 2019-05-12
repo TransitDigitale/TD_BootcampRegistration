@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -61,7 +62,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Intent i = new Intent(LoginActivity.this,Register.class);
-                String url = "http://www.google.com";
+                String url = "https://apply.codepath.com/cohorts/haiti-androidbootcamp-summer-2019/versions/student/";
                 Intent i = new Intent(Intent.ACTION_VIEW);
                 i.setData(Uri.parse(url));
                 startActivity(i);
@@ -73,10 +74,10 @@ public class HomeActivity extends AppCompatActivity {
         btnShareAndroid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String shareBody = "http://www.google.com";
+                String shareBody = "https://apply.codepath.com/cohorts/haiti-androidbootcamp-summer-2019/versions/student/";
                 Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
                 sharingIntent.setType("text/plain");
-                sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Here");
+                sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "ANDROID BOOTCAMP");
                 sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
                 startActivity(Intent.createChooser(sharingIntent, getResources().getString(R.string.share_using)));
                 myDialog.dismiss();
@@ -90,8 +91,93 @@ public class HomeActivity extends AppCompatActivity {
 
     public void onIos(View view) {
 
+        TextView tvLinkAndroid;
+        Button btnRegisterAndroid;
+        Button btnShareAndroid;
+        myDialog.setContentView(R.layout.popupios);
+        //myDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        //txtclose =(TextView) myDialog.findViewById(R.id.txtclose);
+        //txtclose.setText("M");
+        btnRegisterAndroid = (Button) myDialog.findViewById(R.id.btnRegisterAndroid);
+        btnRegisterAndroid.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Intent i = new Intent(LoginActivity.this,Register.class);
+                String url = "https://apply.codepath.com/cohorts/haiti-ios-bootcamp-summer-2019/versions/student/";
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);
+                myDialog.dismiss();
+            }
+        });
+
+        btnShareAndroid = (Button) myDialog.findViewById(R.id.btnShareAndroid);
+        btnShareAndroid.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String shareBody = "https://apply.codepath.com/cohorts/haiti-ios-bootcamp-summer-2019/versions/student/";
+                Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+                sharingIntent.setType("text/plain");
+                sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "iOS BOOTCAMP");
+                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+                startActivity(Intent.createChooser(sharingIntent, getResources().getString(R.string.share_using)));
+                myDialog.dismiss();
+            }
+        });
+
+        myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        myDialog.show();
 
 
+
+    }
+
+    public void onHftic(View view) {
+
+        TextView tvLinkAndroid;
+        Button btnRegisterAndroid;
+        Button btnShareAndroid;
+        myDialog.setContentView(R.layout.popuphftic);
+        //myDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        //txtclose =(TextView) myDialog.findViewById(R.id.txtclose);
+        //txtclose.setText("M");
+        btnRegisterAndroid = (Button) myDialog.findViewById(R.id.btnRegisterAndroid);
+        btnRegisterAndroid.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Intent i = new Intent(LoginActivity.this,Register.class);
+                String url = "https://apply.codepath.com/cohorts/haiti-androidbootcampforwomen-summer-2019/versions/student/";
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);
+                myDialog.dismiss();
+            }
+        });
+
+        btnShareAndroid = (Button) myDialog.findViewById(R.id.btnShareAndroid);
+        btnShareAndroid.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String shareBody = "https://apply.codepath.com/cohorts/haiti-androidbootcampforwomen-summer-2019/versions/student/";
+                Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+                sharingIntent.setType("text/plain");
+                sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "WOMEN ANDROID BOOTCAMP");
+                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+                startActivity(Intent.createChooser(sharingIntent, getResources().getString(R.string.share_using)));
+                myDialog.dismiss();
+            }
+        });
+
+        myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        myDialog.show();
+
+
+    }
+
+    public void onHistory(View view) {
+
+        Snackbar.make(view, "Coming Soon", Snackbar.LENGTH_LONG)
+                .setAction("Action", null).show();
 
 
     }

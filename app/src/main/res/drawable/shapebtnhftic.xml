@@ -4,7 +4,7 @@
 
     <item android:state_pressed="true">
         <shape>
-            <solid android:color="#FFFD38"/>
+            <solid android:color="#0C3FEF"/>
             <stroke
                 android:width="2.3dp"
                 android:color="#d3d3d3" />
@@ -18,7 +18,7 @@
             <solid android:color="#ffffff"/>
             <stroke
                 android:width="3dp"
-                android:color="#FFFD38" />
+                android:color="#0C3FEF" />
             <corners
                 android:radius="15dp" />
         </shape>
