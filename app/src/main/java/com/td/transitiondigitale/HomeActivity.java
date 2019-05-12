@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,6 +13,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,6 +24,7 @@ public class HomeActivity extends AppCompatActivity {
 
     CarouselView carouselView;
     Dialog myDialog;
+    RelativeLayout coordinatorLayout;
 
     int[] sampleImages = {R.drawable.rl1, R.drawable.rl2, R.drawable.rl3};
     //int NUMBER_OF_PAGES = 5;
@@ -38,6 +41,9 @@ public class HomeActivity extends AppCompatActivity {
 
         //PopUp
         myDialog = new Dialog(this);
+
+        //snackbar
+        coordinatorLayout = (RelativeLayout) findViewById(R.id.home);
     }
 
     ImageListener imageListener = new ImageListener() {
@@ -176,9 +182,24 @@ public class HomeActivity extends AppCompatActivity {
 
     public void onHistory(View view) {
 
-        Snackbar.make(view, "Coming Soon", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show();
+        Snackbar snackbar = Snackbar
+                .make(coordinatorLayout, "Coming Soon", Snackbar.LENGTH_LONG)
+                .setAction("Visit our Website", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
 
+                        String url = "https://transitiondigitalehaiti.com/";
+                        Intent i = new Intent(Intent.ACTION_VIEW);
+                        i.setData(Uri.parse(url));
+                        startActivity(i);
+
+                    }
+                });
+        snackbar.setActionTextColor(Color.BLUE);
+        View sbView = snackbar.getView();
+        TextView textView = (TextView) sbView.findViewById(android.support.design.R.id.snackbar_text);
+        textView.setTextColor(Color.MAGENTA);
+        snackbar.show();
 
     }
 }
